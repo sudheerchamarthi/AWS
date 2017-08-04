@@ -59,13 +59,15 @@ Follow the Below URL's and Practise.
 
  1 [Launch a Linux Instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
  
+ * [Create EBS volume and attach to Instance ](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html)
+ * [Make EBS Volume available for use Linux](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
+ 
  2 [Launch a Windows Instance]( http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html)
  
   * [Create EBS volume and attach to Instance ](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html)
-  * [Make EBS Volume available for use Linux](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
   * [Make EBS Volume available for use Windows](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-using-volumes.html)
   
- 4. Modify the EBS Volume Size and type.
+ 4. Modify the EBS Volume Size and type in both Linux and Windows Machines.
     * [Linux](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html)
     * [Windows](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-expand-volume.html)
 3. [Create an AMI of the machine](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)
