@@ -12,7 +12,7 @@
 * LAB 6: [Use AWS CLI and create an EC2 Instance](http://docs.aws.amazon.com/cli/latest/reference/ec2/)
 ##
 
-### DO The Below Assignment
+### Do The Below Assignment
 ##
 
 * Use auto scaling groups and deploy a highly available and very secured WordPress site behind ELB.
