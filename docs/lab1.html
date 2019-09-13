@@ -6,14 +6,14 @@
 <li>Launch an EC2 instance with Amazon Linux OS and PublicIP address. Install Apache on it(Make sure that you enable Apache to start on boot).<br /><br />Help: <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html">Launch a Linux Instance</a><br /><a href="https://raw.githubusercontent.com/sudheerchamarthi/awslabs/master/installapache.sh">Commands to Install Apache<br /><br /></a></li>
 <li>Backup: Create AMI of this Instance<br /><br /></li>
 <li>Destroy to create Outage: Terminate the EC2 instance</li>
-<li>Recover it: Launch new Instance from the created&nbsp;</li>
+<li>Recover it: Launch new Instance from the created AMI&nbsp;</li>
 </ol>
 <p>&nbsp;</p>
 <p><strong>Not a Bad Approach:</strong></p>
 <ol>
-<li>Create another EC2 instance from the AMI<br /><br /></li>
-<li>Of these two Instances, we will treat one an active Instance which will server Traffic and the other as Standby which we will bring up in case of any failure.<br /><br /></li>
-<li>Create an Elastic IP(EIP) and associate it to standby EC2<br /><br /></li>
+<li>Create another EC2 instance from the AMI created in the above step<br /><br /></li>
+<li>Of these two Instances, we will treat one as active Instance which will server Traffic to end users and the other as Standby which we will bring up in case of any outage.<br /><br /></li>
+<li>Create an Elastic IP(EIP) and associate it to Active EC2<br /><br /></li>
 <li>Create Outage by stopping apache service in active Instance.<br /><br /></li>
 <li>Failover to the standby Instance by Re-Associating the same&nbsp;Elastic IP(EIP) to the standby Instance</li>
 </ol>
@@ -31,9 +31,9 @@
 <li>Create <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/GettingStartedTutorial.html#gs-create-asg">Autoscaling Group</a> with the above Launch Config. Make sure you select the ELB so that ASG will automatically register the Instances to ELB.&nbsp;<br /><br /></li>
 <li>Add <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-updating-console.html">Scaling Policies.<br /><br /></a></li>
 <li>Terminate any one of the EC2 instances. In a few minutes, you can see ASG will spin up another EC2 instance.<br /><br /></li>
-<li>Increase the CPU load on EC2 instance and in a few minutes, you can see ASG launching new Instance based on your scaling policy.<br /><br /></li>
+<li>Increase the CPU load on EC2 instance and in a few minutes, you can see ASG launching new Instance based on your scaling policy.<br />Help: <a href="https://raw.githubusercontent.com/sudheerchamarthi/awslabs/master/stress.sh">stress</a></li>
 </ol>
-<h2>More Labs if You are interested: </h2>
+<h2>More Labs if You are interested:</h2>
 <ul>
 <li>LAB 1 -&nbsp;<a href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html">Launch a Windows Instance</a></li>
 <li>LAB 2 -&nbsp;<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html">Create EBS volume and attach to Instance</a></li>
