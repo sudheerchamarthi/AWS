@@ -1,0 +1,13 @@
+site_name: sudheerchamarthi
+theme:
+  name: material
+  palette:
+    scheme: preference
+    primary: red
+    accent: indigo
+plugins:
+  - search:
+  - minify:
+      minify_html: true
+  - git-revision-date-localized
+  - awesome-pages
