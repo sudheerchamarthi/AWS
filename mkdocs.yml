@@ -1,4 +1,6 @@
 site_name: sudheerchamarthi
+repo_name: sudheerchamarthi/sudheerchamarthi.github.io
+repo_url: https://github.com/sudheerchamarthi/sudheerchamarthi.github.io.git
 theme:
   name: material
   palette:
